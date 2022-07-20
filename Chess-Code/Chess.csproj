@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{821B6A5C-03FB-4060-AD42-4D6F6D230FC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chess</RootNamespace>
+    <AssemblyName>Chess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI.cs" />
+    <Compile Include="ChooseDubbedPieceWhite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDubbedPieceWhite.Designer.cs">
+      <DependentUpon>ChooseDubbedPieceWhite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseDubbedPieceBlack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDubbedPieceBlack.Designer.cs">
+      <DependentUpon>ChooseDubbedPieceBlack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EatenPieceHolder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChooseDubbedPieceBlack.resx">
+      <DependentUpon>ChooseDubbedPieceBlack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseDubbedPieceWhite.resx">
+      <DependentUpon>ChooseDubbedPieceWhite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31xX8v50oIL._SY355_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PawnB.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pawn-black_256x256_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pawn-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rook-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bishop-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PawnB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RookB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnightB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BishopB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QueenB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KingB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PawnB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BishopB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bishop-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KingB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnightB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pawn-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QueenB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RookB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rook-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\370797.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74183.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\di-evantile_charming-life.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon99.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Front.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Two Steps From Hell - Victory %28320  kbps%29 %28YouTube 2 MP3 Converter%29.aup" />
+    <None Include="Resources\Two Steps From Hell - Victory %28320  kbps%29 %28YouTube 2 MP3 Converter%29.wav" />
+    <None Include="Resources\Stephen_Rippy_-_Age_of_Mythology_OST_-_Ma_am...Some_Other_Sunset_Defeat_Theme_%28mp3.pm%29.wav" />
+    <None Include="Resources\Epic-battle-music-grzegorz-majcherczyk-heroica.wav" />
+    <None Include="Resources\32px-Speaker_Icon.svg.png" />
+    <None Include="Resources\32px-Mute_Icon.svg.png" />
+    <None Include="Resources\Capture.PNG" />
+    <Content Include="Resources\frontIcon.ico" />
+    <None Include="Resources\Osullivanluke-Orb-Os-X-Chess.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
